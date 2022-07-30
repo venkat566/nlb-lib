@@ -7,5 +7,4 @@ def call () {
   mvn --version
   mvn clean package
   '''
-  }
 }
