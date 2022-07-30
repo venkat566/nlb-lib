@@ -3,10 +3,9 @@
 def call (config) {
 
   echo ' ----------- Starting build --------'
-  def buildcommand = config.buildcommand
   def projectType = config.projectType
 
-  def cmd = buildcommand ? buildcommand : projectType
+  def cmd = projectType
   sh 'cmd'
 
   switch(projectType) {
