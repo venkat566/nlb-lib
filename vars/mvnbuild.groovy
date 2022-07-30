@@ -3,8 +3,5 @@
 def call () {
 
   echo ' ----------- Starting build --------'
-  sh '''
-  mvn --version
-  mvn clean package
-  '''
+  shWrapper 'mvn clean package'
 }
