@@ -2,11 +2,8 @@
 
 def call (appname, version) {
   echo "---- Docker build -----"
+  sh '''
+  docker build -t ${appname}:${version} .
 
-  def cmd = $/
-  docker build -t ${appname}:latest . \
-  docker tag ${appname}:latest ${appname}:${version}
-  /$
-
-  sh "cmd"
+  '''
 }
