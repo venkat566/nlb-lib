@@ -2,7 +2,7 @@
 
 def call (appName, version, registry) {
 
-  withDockerRegistry(credentialsId: 'nexus-admin', url: 'http://44.202.62.76:8082') {
+  withDockerRegistry(credentialsId: 'nexus-admin', url: 'http://3.82.129.115:8082') {
     shWrapper 'docker push ${registry}/${appName}:${version}'
   }
 }
